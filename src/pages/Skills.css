@@ -21,6 +21,22 @@
   }
 }
 
+@media (max-width: 768px) {
+  .skills-page {
+    padding: 16px 12px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-page {
+    padding: 12px 8px 20px;
+  }
+
+  .skills-hero-img-container {
+    height: 210px;
+  }
+}
+
 /* ---------------------------------------------------------
    LEFT COLUMN
 --------------------------------------------------------- */

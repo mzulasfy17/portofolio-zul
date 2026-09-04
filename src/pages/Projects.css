@@ -23,6 +23,47 @@
   }
 }
 
+@media (max-width: 768px) {
+  .projects-page {
+    padding: 16px 12px 24px;
+  }
+
+  .filter-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 4px;
+  }
+
+  .filter-btn {
+    width: auto;
+    flex: 1 1 auto;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-page {
+    padding: 12px 8px 20px;
+  }
+
+  .filter-btn {
+    font-size: 12px;
+    padding: 8px 10px;
+    gap: 8px;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .profile-img-box {
+    height: 210px;
+  }
+}
+
 /* ---------------------------------------------------------
    LEFT COLUMN (SIDEBAR)
 --------------------------------------------------------- */
@@ -163,48 +204,54 @@
 .filter-list {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  padding: 8px 4px;
+  gap: 5px;
+  margin-bottom: 4px;
 }
 
 .filter-btn {
   width: 100%;
+  min-height: 42px;
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 10px 14px;
-  border-radius: 8px;
+  padding: 0 12px;
+  color: #172849;
   background: transparent;
-  border: 1px solid transparent;
-  color: #1e3a75;
-  font-family: var(--font-pixel);
-  font-size: 0.68rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
+  border: none;
   text-align: left;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    color 0.2s ease;
 }
 
 .filter-btn-icon {
-  font-size: 1rem;
-  color: #2b64c4;
+  color: #3478d6;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
 }
 
 .filter-btn:hover {
-  background: #e3effd;
-  color: #133273;
+  color: #246bce;
+  background: #edf5ff;
+  transform: translateX(3px);
 }
 
 .filter-btn.active {
-  background: #d4e5fc;
-  border-color: #a4c7f7;
-  color: #0f285c;
-  box-shadow: inset 0 1px 3px rgba(30, 80, 160, 0.08);
+  color: #10234d;
+  background: #e5f0ff;
+  border-radius: 4px;
+  font-weight: 700;
 }
 
 .filter-btn.active .filter-btn-icon {
-  color: #174eb8;
+  color: #3478d6;
 }
 
 

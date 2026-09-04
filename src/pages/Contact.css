@@ -36,6 +36,22 @@
   }
 }
 
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 16px 12px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-page {
+    padding: 12px 8px 20px;
+  }
+
+  .contact-profile-img-box {
+    height: 210px;
+  }
+}
+
 /* ---------------------------------------------------------
    LEFT COLUMN (SIDEBAR)
 --------------------------------------------------------- */

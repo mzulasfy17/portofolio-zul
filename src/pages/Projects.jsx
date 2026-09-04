@@ -135,11 +135,11 @@ function Projects() {
   const { t } = useLanguage();
 
   const filters = [
-    { id: "all", label: t("projectsPage.filters.all"), icon: <FiGrid /> },
-    { id: "mobile", label: t("projectsPage.filters.mobile"), icon: <FiSmartphone /> },
-    { id: "web", label: t("projectsPage.filters.web"), icon: <FiMonitor /> },
-    { id: "uiux", label: t("projectsPage.filters.uiux"), icon: <FiLayers /> },
-    { id: "research", label: t("projectsPage.filters.research"), icon: <FiBookOpen /> },
+    { id: "all", label: t("projectsPage.filters.all"), icon: <FiGrid size={18} /> },
+    { id: "mobile", label: t("projectsPage.filters.mobile"), icon: <FiSmartphone size={18} /> },
+    { id: "web", label: t("projectsPage.filters.web"), icon: <FiMonitor size={18} /> },
+    { id: "uiux", label: t("projectsPage.filters.uiux"), icon: <FiLayers size={18} /> },
+    { id: "research", label: t("projectsPage.filters.research"), icon: <FiBookOpen size={18} /> },
   ];
 
   const projectsData = baseProjectsMeta.map((p) => {

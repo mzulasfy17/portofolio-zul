@@ -3843,6 +3843,53 @@ a {
 }
 
 /* =========================================================
+   MOBILE AUTO-LAYOUT ENHANCEMENTS (< 768px)
+========================================================= */
+@media (max-width: 768px) {
+  #root,
+  .main-layout {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .quick-skills {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .quick-skill {
+    flex: 1 1 calc(50% - 8px);
+    min-width: 120px;
+  }
+
+  .quest-banner-body {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .quest-banner-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .quest-primary-button,
+  .quest-secondary-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .experience-card-meta {
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-start;
+  }
+}
+
+/* =========================================================
    EXPERIENCE PAGE
 ========================================================= */
 
