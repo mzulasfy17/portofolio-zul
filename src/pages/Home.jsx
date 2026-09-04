@@ -354,7 +354,7 @@ function Home() {
           ================================================= */}
 
           <a
-            href="/cv.pdf"
+            href="/CV Zul Asfi.pdf"
             download
             className="cv-button"
           >
