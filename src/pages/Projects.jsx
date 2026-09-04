@@ -15,6 +15,8 @@ import {
   FiPieChart,
   FiBookmark,
   FiExternalLink,
+  FiBookOpen,
+  FiCpu,
 } from "react-icons/fi";
 
 import {
@@ -23,6 +25,8 @@ import {
   SiMysql,
   SiBootstrap,
   SiFigma,
+  SiReact,
+  SiJavascript,
 } from "react-icons/si";
 
 import WindowButtons from "../components/WindowButtons";
@@ -44,6 +48,7 @@ const baseProjectsMeta = [
       { name: "Kotlin", icon: <SiKotlin className="tech-icon-kotlin" /> },
       { name: "Retrofit", icon: <FiCode className="tech-icon-retrofit" /> },
       { name: "SQL", icon: <FiDatabase className="tech-icon-sql" /> },
+      { name: "NLP", icon: <FiCpu className="tech-icon-nlp" /> },
     ],
     primaryAction: {
       type: "github",
@@ -86,6 +91,42 @@ const baseProjectsMeta = [
       url: "https://www.figma.com/design/OXSGzLv8tLChGXezYSs3gb/E-Rehabcare-RSJ-Tampan?node-id=0-1&t=ZyowXAZuCjMMcRcI-1",
     },
   },
+  {
+    id: "portofolio",
+    categoryKey: "web",
+    badgeClass: "badge-web",
+    featured: false,
+    image: "/images/portofolio.png",
+    fallbackImage: "/images/portofolio.png",
+    techStack: [
+      { name: "React", icon: <SiReact className="tech-icon-react" /> },
+      { name: "CSS", icon: <FiCode className="tech-icon-css" /> },
+      { name: "JS", icon: <SiJavascript className="tech-icon-js" /> },
+    ],
+    primaryAction: {
+      type: "website",
+      label: "WEBSITE",
+      icon: <FiExternalLink />,
+      url: "https://portofolio-zulasfi.vercel.app/",
+    },
+  },
+  {
+    id: "LinguaTales-Paper",
+    categoryKey: "research",
+    badgeClass: "badge-research",
+    featured: false,
+    image: "/images/paper.png",
+    fallbackImage: "/images/paper.png",
+    techStack: [
+      { name: "Research", icon: <FiBookOpen className="tech-icon-research" /> },
+    ],
+    primaryAction: {
+      type: "publication",
+      label: "PAPER",
+      icon: <FiExternalLink />,
+      url: "https://ejurnal.seminar-id.com/index.php/tin/article/view/10065",
+    },
+  },
 ];
 
 function Projects() {
@@ -98,6 +139,7 @@ function Projects() {
     { id: "mobile", label: t("projectsPage.filters.mobile"), icon: <FiSmartphone /> },
     { id: "web", label: t("projectsPage.filters.web"), icon: <FiMonitor /> },
     { id: "uiux", label: t("projectsPage.filters.uiux"), icon: <FiLayers /> },
+    { id: "research", label: t("projectsPage.filters.research"), icon: <FiBookOpen /> },
   ];
 
   const projectsData = baseProjectsMeta.map((p) => {
