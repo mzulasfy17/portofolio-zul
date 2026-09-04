@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   FiFolder,
   FiGrid,
@@ -133,6 +133,34 @@ function Projects() {
   const [activeFilter, setActiveFilter] = useState("all");
   const [selectedProject, setSelectedProject] = useState(null);
   const { t } = useLanguage();
+
+  const openModal = (project) => {
+    setSelectedProject(project);
+    window.history.pushState({ modalOpen: true }, "");
+  };
+
+  const closeModal = () => {
+    if (selectedProject) {
+      if (window.history.state?.modalOpen) {
+        window.history.back();
+      } else {
+        setSelectedProject(null);
+      }
+    }
+  };
+
+  useEffect(() => {
+    const handlePopState = () => {
+      if (selectedProject) {
+        setSelectedProject(null);
+      }
+    };
+
+    window.addEventListener("popstate", handlePopState);
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+    };
+  }, [selectedProject]);
 
   const filters = [
     { id: "all", label: t("projectsPage.filters.all"), icon: <FiGrid size={18} /> },
@@ -348,7 +376,7 @@ function Projects() {
                         <button
                           type="button"
                           className="btn-details"
-                          onClick={() => setSelectedProject(project)}
+                          onClick={() => openModal(project)}
                         >
                           <FiFileText />
                           <span>{t("projectsPage.detailBtn")}</span>
@@ -385,7 +413,7 @@ function Projects() {
       {selectedProject && (
         <div
           className="retro-modal-overlay"
-          onClick={() => setSelectedProject(null)}
+          onClick={closeModal}
         >
           <div
             className="retro-modal-window"
@@ -396,7 +424,7 @@ function Projects() {
               <button
                 type="button"
                 className="modal-close-btn"
-                onClick={() => setSelectedProject(null)}
+                onClick={closeModal}
                 aria-label="Close modal"
               >
                 <FiX />
@@ -454,7 +482,7 @@ function Projects() {
                 <button
                   type="button"
                   className="modal-action-btn secondary"
-                  onClick={() => setSelectedProject(null)}
+                  onClick={closeModal}
                 >
                   {t("projectsPage.closeBtn")}
                 </button>

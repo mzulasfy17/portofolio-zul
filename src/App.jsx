@@ -9,10 +9,13 @@ import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 
+import ScrollToTop from "./components/ScrollToTop";
+
 function App() {
   return (
     <LanguageProvider>
       <BrowserRouter>
+        <ScrollToTop />
         <MainLayout>
           <Routes>
 
