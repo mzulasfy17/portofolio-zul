@@ -6,7 +6,6 @@ import {
   FiCode,
   FiFolder,
   FiMail,
-  FiDownload,
   FiMapPin,
   FiCalendar,
   FiStar,
@@ -347,25 +346,6 @@ function Home() {
             </div>
 
           </div>
-
-
-          {/* =================================================
-              DOWNLOAD CV
-          ================================================= */}
-
-          <a
-            href="/CV Muhammad Zul Asfi.pdf"
-            download
-            className="cv-button"
-          >
-
-            <FiDownload />
-
-            <span>
-              {t("home.downloadCv")}
-            </span>
-
-          </a>
 
         </Window>
 
