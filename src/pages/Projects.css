@@ -529,6 +529,9 @@
 .tech-icon-spss { color: #0076a8; }
 .tech-icon-excel { color: #107c41; }
 .tech-icon-data { color: #2563eb; }
+.tech-icon-flutter { color: #02569B; }
+.tech-icon-dart { color: #0175C2; }
+.tech-icon-nextjs { color: #111111; }
 
 /* Card Action Buttons */
 .card-actions {
@@ -573,6 +576,14 @@
   transition: all 0.2s ease;
   text-transform: uppercase;
   text-decoration: none;
+  background: #2b6ad4;
+  border: 1px solid #1a4fae;
+  color: #ffffff;
+}
+
+.btn-primary-action:hover {
+  background: #1f58bd;
+  box-shadow: 0 2px 6px rgba(43, 106, 212, 0.3);
 }
 
 .btn-action-github {
@@ -597,15 +608,38 @@
   border-color: #6999e0;
 }
 
+.btn-action-website {
+  background: #0284c7;
+  border: 1px solid #0369a1;
+  color: #ffffff;
+}
+
+.btn-action-website:hover {
+  background: #0369a1;
+  box-shadow: 0 2px 6px rgba(2, 132, 199, 0.3);
+}
+
+.btn-action-publication,
 .btn-action-pdf {
   background: #8b5cf6;
   border: 1px solid #7c3aed;
   color: #ffffff;
 }
 
+.btn-action-publication:hover,
 .btn-action-pdf:hover {
   background: #7c3aed;
   box-shadow: 0 2px 6px rgba(139, 92, 246, 0.3);
+}
+
+.btn-primary-action.disabled,
+.btn-action-disabled {
+  background: #f1f5f9;
+  border: 1px dashed #cbd5e1;
+  color: #94a3b8;
+  cursor: not-allowed;
+  pointer-events: none;
+  box-shadow: none;
 }
 
 
@@ -731,4 +765,51 @@
   display: flex;
   gap: 12px;
   margin-top: 8px;
+}
+
+/* Modal action buttons */
+.modal-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.65rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+}
+
+.modal-action-btn.primary {
+  background: #2b6ad4;
+  border: 2px solid #1a4fae;
+  color: #ffffff;
+}
+
+.modal-action-btn.primary:hover:not(.disabled) {
+  background: #1f58bd;
+  box-shadow: 0 4px 12px rgba(43, 106, 212, 0.3);
+}
+
+.modal-action-btn.secondary {
+  background: #ffffff;
+  border: 2px solid #94b8eb;
+  color: #1d4db0;
+}
+
+.modal-action-btn.secondary:hover {
+  background: #edf4fe;
+  border-color: #6999e0;
+}
+
+.modal-action-btn.disabled {
+  background: #f1f5f9 !important;
+  border: 2px dashed #cbd5e1 !important;
+  color: #94a3b8 !important;
+  cursor: not-allowed;
+  pointer-events: none;
+  box-shadow: none !important;
 }

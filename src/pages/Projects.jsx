@@ -27,6 +27,9 @@ import {
   SiFigma,
   SiReact,
   SiJavascript,
+  SiFlutter,
+  SiNextdotjs,
+  SiDart,
 } from "react-icons/si";
 
 import WindowButtons from "../components/WindowButtons";
@@ -38,10 +41,31 @@ import "./Projects.css";
 
 const baseProjectsMeta = [
   {
-    id: "linguatales",
+    id: "posan",
     categoryKey: "mobile",
     badgeClass: "badge-mobile",
     featured: true,
+    image: "/images/posan.png",
+    fallbackImage: "/images/posan.jpg",
+    techStack: [
+      { name: "Dart", icon: <SiDart className="tech-icon-dart" /> },
+      { name: "Flutter", icon: <SiFlutter className="tech-icon-flutter" /> },
+      { name: "Next.js", icon: <SiNextdotjs className="tech-icon-nextjs" /> },
+      { name: "REST API", icon: <FiCode className="tech-icon-retrofit" /> },
+    ],
+    primaryAction: {
+      type: "github",
+      label: "GITHUB",
+      icon: <FiGithub />,
+      url: "https://github.com/mzulasfy17/posan_pos",
+      disabled: false,
+    },
+  },
+  {
+    id: "linguatales",
+    categoryKey: "mobile",
+    badgeClass: "badge-mobile",
+    featured: false,
     image: "/images/linguatales.png",
     fallbackImage: "/images/project-linguatales.png",
     techStack: [
@@ -386,9 +410,9 @@ function Projects() {
                           href={project.primaryAction.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="btn-primary-action"
+                          className={`btn-primary-action ${project.primaryAction.type ? `btn-action-${project.primaryAction.type}` : ""} ${project.primaryAction.disabled || project.primaryAction.url === "#" ? "disabled" : ""}`}
                           onClick={(e) => {
-                            if (project.primaryAction.url === "#") {
+                            if (project.primaryAction.url === "#" || project.primaryAction.disabled) {
                               e.preventDefault();
                             }
                           }}
@@ -467,7 +491,7 @@ function Projects() {
               </div>
 
               <div className="modal-footer-actions">
-                {selectedProject.primaryAction.url !== "#" && (
+                {selectedProject.primaryAction.url !== "#" && !selectedProject.primaryAction.disabled ? (
                   <a
                     href={selectedProject.primaryAction.url}
                     target="_blank"
@@ -477,6 +501,15 @@ function Projects() {
                     {selectedProject.primaryAction.icon}
                     <span>OPEN {selectedProject.primaryAction.label}</span>
                   </a>
+                ) : (
+                  <button
+                    type="button"
+                    className="modal-action-btn primary disabled"
+                    disabled
+                  >
+                    {selectedProject.primaryAction.icon}
+                    <span>{selectedProject.primaryAction.label}</span>
+                  </button>
                 )}
 
                 <button

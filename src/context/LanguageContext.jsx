@@ -38,7 +38,7 @@ export const translations = {
       aboutWalking: "BERJALAN_MASUK...",
       aboutP1_1: "Hi! Saya ",
       aboutP1_2: ", Saya merupakan lulusan Teknik Informatika yang memiliki ketertarikan pada pengembangan aplikasi, khususnya Front-End Development dan Mobile Development. Saya senang mengubah ide menjadi aplikasi yang fungsional, responsif, dan mudah digunakan.",
-      aboutP2: "Saya memiliki pengalaman menggunakan berbagai teknologi seperti HTML, CSS, JavaScript, React, Vite, Kotlin, Java, dan Android Studio. Selain pengembangan aplikasi, saya juga memiliki ketertarikan pada UI/UX Design dan terbiasa menggunakan Figma untuk membuat desain antarmuka serta prototype.",
+      aboutP2: "Saya memiliki pengalaman menggunakan berbagai teknologi seperti HTML, CSS, JavaScript, React, Next.js, Vite, Dart, Flutter, Kotlin, Java, dan Android Studio. Selain pengembangan aplikasi, saya juga memiliki ketertarikan pada UI/UX Design dan terbiasa menggunakan Figma untuk membuat desain antarmuka serta prototype.",
       aboutP3: "Melalui berbagai proyek akademik, proyek pribadi, dan pengalaman praktik, saya terus mengembangkan kemampuan teknis, problem solving, serta kemampuan untuk mempelajari teknologi baru. Saya terbuka terhadap kesempatan untuk belajar, berkolaborasi, dan menciptakan solusi digital yang bermanfaat.",
       badges: {
         fullstack: "FULLSTACK & MOBILE",
@@ -71,6 +71,7 @@ export const translations = {
         viewAll: "LIHAT SEMUA",
         featuredLabel: "★ PROYEK UNGGULAN",
         detailsBtn: "DETAIL",
+        posanDesc: "Aplikasi POS (Point of Sale) kasir mobile berbasis Dart & Flutter dengan backend Next.js, fitur Offline-First dan Cloud Sync.",
         linguaDesc: "Aplikasi mobile untuk pembelajaran bahasa dengan fitur Text-to-Speech interaktif.",
       },
       contactCta: {
@@ -228,6 +229,12 @@ export const translations = {
           description: "Aplikasi mobile Text-to-Speech untuk pembelajaran bahasa dengan fitur terjemahan dan pengucapan.",
           longDescription: "LinguaTales adalah aplikasi mobile Android berfasilitas Text-to-Speech (TTS) interaktif yang membantu pengguna belajar pengucapan bahasa asing, menerjemahkan frasa, serta menyimpan catatan kosakata favorit secara offline maupun online.",
         },
+        posan: {
+          title: "POSAN - POS Mobile Café",
+          category: "MOBILE DEVELOPMENT",
+          description: "Aplikasi POS (Point of Sale) kasir mobile berbasis Dart & Flutter dengan backend Next.js, fitur Offline-First dan Cloud Sync.",
+          longDescription: "POSAN adalah aplikasi Point of Sale (POS) kasir mobile yang dirancang khusus untuk operasional kafe dan coffee shop. Dibangun menggunakan bahasa pemrograman Dart dan framework Flutter untuk antarmuka mobile yang responsif, serta backend Next.js API. Dilengkapi fitur unggulan mode kasir cepat, arsitektur offline-first untuk kelancaran transaksi tanpa hambatan koneksi internet, sinkronisasi data cloud otomatis, manajemen pesanan, riwayat penjualan, dan sistem absensi kasir.",
+        },
         brksyariah: {
           title: "BRK Syariah CMS Mobile",
           category: "UI/UX DESIGN",
@@ -347,7 +354,7 @@ export const translations = {
       aboutWalking: "WALKING_IN...",
       aboutP1_1: "Hi! I’m ",
       aboutP1_2: ", an Informatics Engineering graduate with a strong interest in application development, particularly Front-End Development and Mobile Development. I enjoy turning ideas into functional, responsive, and user-friendly applications.",
-      aboutP2: "I have experience working with various technologies such as HTML, CSS, JavaScript, React, Vite, Kotlin, Java, and Android Studio. In addition to application development, I am also interested in UI/UX Design and proficient in using Figma to create user interface designs and prototypes.",
+      aboutP2: "I have experience working with various technologies such as HTML, CSS, JavaScript, React, Next.js, Vite, Dart, Flutter, Kotlin, Java, and Android Studio. In addition to application development, I am also interested in UI/UX Design and proficient in using Figma to create user interface designs and prototypes.",
       aboutP3: "Through various academic projects, personal projects, and practical experiences, I continuously refine my technical skills, problem-solving abilities, and capacity to learn new technologies. I am open to opportunities to learn, collaborate, and create impactful digital solutions.",
       badges: {
         fullstack: "FULLSTACK & MOBILE",
@@ -380,6 +387,7 @@ export const translations = {
         viewAll: "VIEW ALL",
         featuredLabel: "★ FEATURED PROJECT",
         detailsBtn: "DETAILS",
+        posanDesc: "Mobile Point of Sale (POS) cashier application built with Dart & Flutter and Next.js backend, featuring Offline-First and Cloud Sync.",
         linguaDesc: "A mobile application for language learning with interactive text-to-speech features.",
       },
       contactCta: {
@@ -503,9 +511,9 @@ export const translations = {
       certs: [
         { title: "Legacy JavaScript Algorithms and Data Structures", issuer: "freeCodeCamp", year: "2025", link: "https://www.freecodecamp.org/certification/m_zulasfi/javascript-algorithms-and-data-structures-v8" },
         { title: "Legacy Responsive Web Design", issuer: "freeCodeCamp", year: "2025", link: "https://www.freecodecamp.org/certification/m_zulasfi/responsive-web-design" },
-        { title: "Belajar Dasar Pemrograman JavaScript", issuer: "Dicoding Indonesia", year: "2026", link: "https://www.dicoding.com/certificates/KEXLMELLRZG2" },
-        { title: "Belajar Membuat Front-End Web untuk Pemula", issuer: "Dicoding Indonesia", year: "2026", link: "https://www.dicoding.com/certificates/07Z6QKQWRZQR" },
-        { title: "Belajar Dasar Pemrograman Web", issuer: "Dicoding Indonesia", year: "2025", link: "https://www.dicoding.com/certificates/MRZMV5L8LZYQ" },
+        { title: "Learn Basic JavaScript Programming", issuer: "Dicoding Indonesia", year: "2026", link: "https://www.dicoding.com/certificates/KEXLMELLRZG2" },
+        { title: "Building Front-End Web for Beginners", issuer: "Dicoding Indonesia", year: "2026", link: "https://www.dicoding.com/certificates/07Z6QKQWRZQR" },
+        { title: "Learn Basic Web Programming", issuer: "Dicoding Indonesia", year: "2025", link: "https://www.dicoding.com/certificates/MRZMV5L8LZYQ" },
         { title: "Frontend - Project Portfolio", issuer: "MySkill", year: "2026", link: "https://storage.googleapis.com/myskill-v2-certificates/topic-XUbCkJeUsxh532l1vNjz/v93RKRrU37hx9kZKdyLk5tQMR782-ICOYD7GaiXnh3JOP3ZsR.pdf" },
         { title: "UI-UX Research and Design", issuer: "MySkill", year: "2026", link: "https://storage.googleapis.com/myskill-v2-certificates/learning-path-8PS1hA5AIORGZbVSyadR/v93RKRrU37hx9kZKdyLk5tQMR782-x7uYMrARDOu48TR27CE8.pdf" },
         { title: "Short Class UI/UX Research Design", issuer: "KarirNex", year: "2026", link: "https://karirnex.com/c/3B98s3a" },
@@ -536,6 +544,12 @@ export const translations = {
           category: "MOBILE DEVELOPMENT",
           description: "A mobile Text-to-Speech application for language learning with translation and pronunciation features.",
           longDescription: "LinguaTales is an Android mobile app with interactive Text-to-Speech (TTS) capabilities that helps users learn foreign language pronunciation, translate phrases, and save favorite vocabulary notes offline or online.",
+        },
+        posan: {
+          title: "POSAN - POS Mobile Café",
+          category: "MOBILE DEVELOPMENT",
+          description: "Mobile Point of Sale (POS) cashier application built with Dart & Flutter and Next.js backend, featuring Offline-First and Cloud Sync.",
+          longDescription: "POSAN is a mobile Point of Sale (POS) cashier application tailored for café and coffee shop operations. Built with the Dart programming language and Flutter framework for a responsive mobile UI and Next.js as the backend API. Key features include quick-checkout cashier mode, offline-first architecture for uninterrupted local transactions, automatic cloud synchronization, order management, sales history, and cashier shift attendance tracking.",
         },
         smartfarm: {
           title: "Smartfarm",

@@ -22,7 +22,7 @@ const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "YOUR_PUBL
 
 function Contact() {
   const formRef = useRef();
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -97,14 +97,19 @@ function Contact() {
 
   const sendViaMailto = () => {
     const recipient = "m.zulasfy17@gmail.com";
+    const isEn = lang === "en";
     const subjectText = formData.subject
-      ? `[PORTOFOLIO] ${formData.subject}`
-      : `[PORTOFOLIO] Pesan dari ${formData.name}`;
-    const bodyText =
-      `Nama Pengirim: ${formData.name}\n` +
-      `Email Pengirim: ${formData.email}\n` +
-      `Subjek: ${formData.subject || "-"}\n\n` +
-      `Isi Pesan:\n${formData.message}`;
+      ? `[${isEn ? "PORTFOLIO" : "PORTOFOLIO"}] ${formData.subject}`
+      : `[${isEn ? "PORTFOLIO" : "PORTOFOLIO"}] ${isEn ? "Message from" : "Pesan dari"} ${formData.name}`;
+    const bodyText = isEn
+      ? `Sender Name: ${formData.name}\n` +
+        `Sender Email: ${formData.email}\n` +
+        `Subject: ${formData.subject || "-"}\n\n` +
+        `Message:\n${formData.message}`
+      : `Nama Pengirim: ${formData.name}\n` +
+        `Email Pengirim: ${formData.email}\n` +
+        `Subjek: ${formData.subject || "-"}\n\n` +
+        `Isi Pesan:\n${formData.message}`;
 
     const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(
       subjectText

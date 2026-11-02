@@ -32,17 +32,17 @@ function Skills() {
     {
       category: "WEB DEVELOPMENT",
       icon: <FiMonitor />,
-      skills: ["HTML", "CSS", "JavaScript", "React"],
+      skills: ["HTML", "CSS", "JavaScript", "React", "Next.js"],
     },
     {
       category: "MOBILE DEVELOPMENT",
       icon: <FiSmartphone />,
-      skills: ["Kotlin", "Java", "Android Studio"],
+      skills: ["Dart", "Flutter", "Kotlin", "Java", "Android Studio"],
     },
     {
       category: "DATABASE & TOOLS",
       icon: <FiDatabase />,
-      skills: ["MySQL", "Firebase", "Git & GitHub", "Figma"],
+      skills: ["MySQL", "PostgreSQL", "SQLite" , "Firebase", "Git & GitHub", "Figma"],
     },
   ];
 

@@ -809,9 +809,13 @@ function Home() {
                 <div className="project-preview-image has-thumbnail">
 
                   <img
-                    src="/images/linguatales.png"
-                    alt="LinguaTales App Preview"
+                    src="/images/posan.png"
+                    alt="POSAN App Preview"
                     className="project-thumb-img"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = "/images/posan.jpg";
+                    }}
                   />
 
                   <div className="project-scanline-fx"></div>
@@ -841,27 +845,27 @@ function Home() {
 
 
                     <h3 className="project-card-heading">
-                      LINGUATALES
+                      POSAN - POS MOBILE CAFÉ
                     </h3>
 
 
                     <p>
-                      {t("home.projectsPreview.linguaDesc")}
+                      {t("home.projectsPreview.posanDesc")}
                     </p>
 
 
                     <div className="project-tech">
 
                       <span className="tech-badge-animated">
-                        KOTLIN
+                        DART
                       </span>
 
                       <span className="tech-badge-animated">
-                        ANDROID
+                        FLUTTER
                       </span>
 
                       <span className="tech-badge-animated">
-                        SQL
+                        NEXT.JS
                       </span>
 
                     </div>
